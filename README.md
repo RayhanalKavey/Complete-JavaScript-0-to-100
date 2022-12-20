@@ -116,3 +116,76 @@ console.log(test);
 2
 4
 ```
+
+## Primitive Data Types and Non-primitive data type(Objects)
+
+### Primitive data types
+
+Primitive data types are fundamental data types. There are 7 primitive data types in JavaScript. These are built-in inside JavaScript.
+
+1. Null
+2. Number
+3. Symbol
+4. String
+5. Boolean
+6. BigInt
+7. Undefined
+
+```
+let empty = null;
+let number = 432;
+let symbol = Symbol("Description of the symbol.");
+let string = "kavey";
+let bigInt = BigInt("223") + BigInt("7");
+let boolean = true;
+let notDefined = undefined;
+console.log(empty, number, symbol, string, bigInt, boolean, notDefined);
+
+Result:-
+null 432 Symbol(Description of the symbol.) kavey 230n true undefined
+```
+
+```
+console.log(typeof null); // object
+console.log(typeof 321); //number
+console.log(typeof Symbol("Description of the symbol.")); //symbol
+console.log(typeof "kavey"); //string
+console.log(typeof BigInt("223")); //bigint
+console.log(typeof true); //boolean
+console.log(typeof undefined); //undefined
+```
+
+### Non-primitive data type(Objects)
+
+- Objects are key value payers. Value could be any types of data types.
+
+```
+const obj = {
+  firstName: "Rayhan",
+  lastName: "Kavey",
+};
+```
+
+- We cannot reassign a object declared with const, but we can change or add key value.
+
+```
+const myInfo = {
+  name: "rayhan",
+  age: 50,
+  hasLicense: false,
+  friend: "AJ",
+};
+
+myInfo["name"] = "kavey";
+myInfo["newFriend"] = "Jigri Dost";
+console.log(myInfo);
+
+--Result:-
+{
+  name: 'kavey',
+  age: 50,
+  hasLicense: false,
+  friend: 'AJ',
+  newFriend: 'Jigri Dost'
+}
+```
