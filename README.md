@@ -36,7 +36,7 @@ But in a static typed language like C you declared the types of the variable fir
 
 ### Differences between `var`, `let`, and `const`.
 
-- var is globally scoped, on the other hand let and const are block scoped.
+- `var` is globally scoped, on the other hand `let` and `const` are block scoped.
 
 #### Variable `test` with `var`
 
@@ -87,7 +87,7 @@ Result:-
 212
 ```
 
-- let can be updated, but re-declared
+- `let` can be updated, but re-declared
 
 ```
 let test = 12;
@@ -121,7 +121,7 @@ console.log(test);
 
 ### Primitive data types
 
-Primitive data types are fundamental data types. There are 7 primitive data types in JavaScript. These are built-in inside JavaScript.
+Primitive data types are fundamental data types. There are `7` primitive data types in JavaScript. These are built-in inside JavaScript.
 
 1. Null
 2. Number
@@ -166,7 +166,7 @@ const obj = {
 };
 ```
 
-- We cannot reassign a object declared with const, but we can change or add key value.
+- We cannot reassign a object declared with `const`, but we can change or add key value.
 
 ```
 const myInfo = {
@@ -188,4 +188,82 @@ console.log(myInfo);
   friend: 'AJ',
   newFriend: 'Jigri Dost'
 }
+```
+
+## Expression and Operators
+
+### Expression
+
+A fragment of code that produce a value is called an expression. Every value written literally is an expression. For example, 34, 'kavey' or true etc.
+
+### Operator(`+,-,/,%,= etc.`) and operands(`2,4,3,5 etc.`)
+
+1. Arithmetic Operator
+
+```
+let a = 3;
+let b = 2;
+
+console.log("a(3)+b(2)= ", a + b); //5
+console.log("a(3)-b(2)= ", a - b); //1
+console.log("a(3)/b(2)= ", a / b); //1.5
+console.log("a(3)*b(2)= ", a * b); //6
+console.log("a(3)**b(2)= ", a ** b); //9
+console.log("a(3)%b(2)= ", a % b); //1
+```
+
+- Incremental operator
+
+```
+console.log("a(3)++= ", a++); //3
+//It will display the current value, but increase the value for the next operation. Means next time we use a it will start from value 4
+
+console.log("++a(4)= ", ++a);
+//5 //As you can see it took the previous value 4. Then increment the value and display it.
+```
+
+- Decremental operator
+
+```
+console.log("a(5)--= ", a--); //5
+console.log("--a(4)= ", --a); //3
+```
+
+2. Assignment Operator
+
+```
+let c = 4;
+c = 5;
+c += 5; // c(5) =c+5 // 10
+c -= 5; // c(10) =c-5 // 5
+c %= 3; // c(5)= c%2 // 2
+c **= 2; // c(2) = c**2 // 4
+console.log(c);
+```
+
+3. Comparison Operator
+
+```
+const a = 4;
+const b = 5;
+
+console.log(a == b);  // false  //  equal to
+console.log(a != b);  //  true //  not equal
+console.log(a === b);  // false  //  equal value and type
+console.log(a !== b);  //  true //not equal value or not equal type
+console.log(a > b);  // false  // greater than
+console.log(a < b);  //  true // less than
+console.log(a >= b);  // false  //  greater than or equal to
+console.log(a <= b);  //  true //  less then or equal to
+console.log(a === b ? "true" : "false");  // false  // ternary operator
+```
+
+4. Logical Operator
+
+```
+let a = 3;
+let b = 4;
+console.log(a < b && a == b); // false // and operator
+console.log(a < b || a == b); // true // or operator
+console.log(!(a < b)); // false // and operator
 ```
