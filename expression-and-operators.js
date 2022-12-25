@@ -43,10 +43,15 @@ console.log(a >= b); // false  //  greater than or equal to
 console.log(a <= b); //  true //  less then or equal to
 console.log(a === b ? "true" : "false"); // false  // ternary operator
 */
-
+/**
+ 
 // Logical operator
 let a = 3;
 let b = 4;
 console.log(a < b && a == b); // false // and operator
 console.log(a < b || a == b); // true // or operator
 console.log(!(a < b)); // false // and operator
+*/
+
+// Conditional (ternary) operator
+// console.log(3 > 2 ? "It's true" : "This is a false statement");//It's true

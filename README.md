@@ -267,3 +267,50 @@ console.log(a < b && a == b); // false // and operator
 console.log(a < b || a == b); // true // or operator
 console.log(!(a < b)); // false // and operator
 ```
+
+5. Conditional `ternary` operator
+
+The conditional `ternary` operator is the only JavaScript operator that takes `three operands`: a condition followed by a question mark `?`, then an expression to execute if the condition is truthy followed by a colon `:`, and finally the expression to execute if the condition is `falsy`. This operator is frequently used as an alternative to an `if else` statement.
+
+```
+console.log(3 > 2 ? "It's true" : "This is a false statement");//It's true
+```
+
+## Conditional expression
+
+### Conditional `if else` statement
+
+> A block of code, which must be executed based on some conditions.
+
+For example, you might ask for your age, if your age is greater than 18 you will get a message that you can drive.
+
+There are three forms of if else statement.
+
+- `if`(condition){code execute if true}
+- `if`(condition){code execute if true} `else`{code execute if false}
+- `if`(condition){code execute if true} `else if`(condition){code execute if true} `else`{code execute if both the condition false}
+
+```
+let age = prompt(
+  "Input your age for getting a confirmation of having driving license."
+);
+
+age = Number.parseInt(age);
+
+if (age < 1) {
+  console.log("Please provide a valid age !!");
+
+} else if (age < 18) {
+  console.log(
+    `Keep patience! and keep learning, you will have to wait ${
+      18 - age > 1 ? `${18 - age} years.` : `${18 - age} year.`
+    } `
+  ); // example of ternary operator
+
+} else if (age <= 60) {
+  console.log("You are eligible fo driving!!");
+
+} else {
+  console.log("Take a break and enjoy your break!!");
+}
+```
